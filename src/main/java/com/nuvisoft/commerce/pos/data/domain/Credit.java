@@ -1,6 +1,5 @@
 package com.nuvisoft.commerce.pos.data.domain;
 
-import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.data.mongodb.core.mapping.DBRef;

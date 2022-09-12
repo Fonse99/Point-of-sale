@@ -18,9 +18,9 @@ public interface ICrudResponsesController<Type> {
     public ResponseEntity<Collection<Type>> readAll();
 
     @PutMapping("/edit")
-    public ResponseEntity<Type> edit(@RequestBody Type type);
+    public ResponseEntity<Type> edit(@RequestBody Type element);
 
     @DeleteMapping("/remove")
-    public String delete(@RequestBody Type type);
+    public ResponseEntity<Type> delete(@RequestBody Type element);
 
 }

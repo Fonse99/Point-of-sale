@@ -39,23 +39,24 @@ public class CustomerController implements ICrudResponsesController<Customer> {
     }
 
     @Override
-    public ResponseEntity<Customer> edit(Customer type) {
-        // TODO Auto-generated method stub
-        return null;
+    public ResponseEntity<Customer> edit(Customer element) {
+        return new ResponseEntity<Customer>(
+                this.service.edit(element),
+                HttpStatus.CREATED);
     }
 
     @Override
-    public String delete(Customer type) {
-        // TODO Auto-generated method stub
-        return "Was deleted";
+    public ResponseEntity<Customer> delete(Customer element) {
+        return new ResponseEntity<Customer>(
+                this.service.delete(element),
+                HttpStatus.OK);
     }
     // #endregion
 
     @DeleteMapping("/removeAll")
-    public ResponseEntity<Collection<Customer>> deleteAll(@RequestBody Collection<Customer> customers){
+    public ResponseEntity<Collection<Customer>> deleteAll(@RequestBody Collection<Customer> customers) {
         return new ResponseEntity<Collection<Customer>>(
-            this.service.deleteAll(customers),
-            HttpStatus.OK
-        );
+                this.service.deleteAll(customers),
+                HttpStatus.OK);
     }
 }
