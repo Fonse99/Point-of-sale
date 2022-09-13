@@ -1,5 +1,6 @@
 package com.nuvisoft.commerce.pos.data.domain;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
@@ -8,6 +9,8 @@ import lombok.Data;
 @Document
 public class ProductDetail {
 
+    @Id
+    private String id;
     private double price;
     private double cost;
     private double quantity;
