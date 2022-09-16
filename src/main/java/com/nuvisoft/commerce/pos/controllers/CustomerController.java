@@ -5,6 +5,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import com.nuvisoft.commerce.pos.services.CustomerService;
 
 @RestController
 @RequestMapping("api/customer")
+@CrossOrigin(origins = "http://localhost:4200")
 public class CustomerController implements ICrudResponsesController<Customer> {
 
     @Autowired
