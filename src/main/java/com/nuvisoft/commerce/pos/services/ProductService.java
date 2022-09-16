@@ -17,6 +17,7 @@ public class ProductService implements ICrudOperations<Product, String>, IMultip
     @Autowired
     RProduct repository;
 
+    // #region ICrudOperations
     @Override
     public Collection<Product> deleteAll(Collection<Product> elements) {
         this.repository.deleteAll(elements);
@@ -56,5 +57,11 @@ public class ProductService implements ICrudOperations<Product, String>, IMultip
         this.repository.delete(element);
         return element;
     }
+    // #endregion
 
+    public Product readProductByBarcode(String barcode) {
+
+        return this.repository
+                .findByBarcode(barcode);
+    }
 }

@@ -18,7 +18,7 @@ public class UserService implements ICrudOperations<User, String> {
 
     @Override
     public User create(User element) {
-        return this.create(element);
+        return this.repository.save(element);
     }
 
     @Override

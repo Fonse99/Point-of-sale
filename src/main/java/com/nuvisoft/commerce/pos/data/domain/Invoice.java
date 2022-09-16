@@ -15,7 +15,7 @@ public class Invoice {
 
     @Id
     private String id;
-    private Date saleDate;
+    private Date saleDate = new Date();
     private int invoiceNumber;
     @DBRef
     private User seller;
@@ -23,6 +23,6 @@ public class Invoice {
     private double discount;
     private double finalAmount;
     @DBRef
-    private Collection<ProductDetail> details;
+    private Collection<Product> details;
 
 }
