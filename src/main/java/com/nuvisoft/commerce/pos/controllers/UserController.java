@@ -16,7 +16,6 @@ import com.nuvisoft.commerce.pos.services.UserService;
 @RequestMapping("api/user")
 public class UserController implements ICrudResponsesController<User> {
 
-
     @Autowired UserService service;
 
     @Override

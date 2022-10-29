@@ -35,7 +35,7 @@ public class CustomerController implements ICrudResponsesController<Customer> {
 
     @Override
     public ResponseEntity<Collection<Customer>> readAll() {
-        return new ResponseEntity<Collection<Customer>>(
+        return new ResponseEntity<Collection<Customer>>(    
                 this.service.readAll(),
                 HttpStatus.OK);
     }

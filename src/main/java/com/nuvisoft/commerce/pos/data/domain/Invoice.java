@@ -17,12 +17,11 @@ public class Invoice {
     private String id;
     private Date saleDate = new Date();
     private int invoiceNumber;
-    @DBRef
+    // @DBRef
     private User seller;
     private double amount;
     private double discount;
     private double finalAmount;
-    @DBRef
-    private Collection<Product> details;
+    private Collection<InvoiceDetail> invoiceDetails;
 
 }

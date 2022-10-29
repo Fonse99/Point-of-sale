@@ -17,4 +17,8 @@ public class Credit {
     private Invoice invoice;
     private double amount;
     private boolean isLate;
+    @DBRef
+    private Customer customer;
+    @DBRef
+    private User user;
 }
