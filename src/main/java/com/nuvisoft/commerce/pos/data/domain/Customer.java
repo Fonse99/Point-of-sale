@@ -15,6 +15,6 @@ public class Customer {
     private String lastName;
     private String dni;
     private String phoneNumber;
-    private Credit credits;
+    // private Credit credit;
 
 }
