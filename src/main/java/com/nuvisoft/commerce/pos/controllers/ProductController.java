@@ -16,7 +16,7 @@ import com.nuvisoft.commerce.pos.data.domain.Product;
 import com.nuvisoft.commerce.pos.services.ProductService;
 
 @RestController
-@CrossOrigin(origins = { "http://localhost:4200" })
+@CrossOrigin(origins = { "*" })
 @RequestMapping("api/product")
 public class ProductController implements ICrudResponsesController<Product> {
 

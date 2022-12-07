@@ -15,7 +15,7 @@ import com.nuvisoft.commerce.pos.services.InvoiceService;
 
 @RestController
 @RequestMapping("api/invoice")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = { "*" })
 public class InvoiceController implements ICrudResponsesController<Invoice> {
 
     @Autowired

@@ -34,4 +34,4 @@ build/
 
 ### Environment ###
 .env
-.\src\main\resources\application-prod.properties
+**prod.properties
